@@ -10,7 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', ['uses' => 'AppController@home', 'as' => 'home'])->middleware('auth');
+
+Route::post('/api/upload/image', ['uses' => 'ApiController@uploadImage', 'as' => 'api.upload.image']);
+
+Route::get('/', ['uses' => 'AppController@index', 'as' => 'index']);
+
+// Page
+Route::get('/{link}', ['uses' => 'PageController@item', 'as' => 'page.item']);
+
+// Comment
+Route::post('/comment/submit', ['uses' => 'CommentController@store', 'as' => 'comment.submit']);

@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('CONFIG_TIMEZONE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('CONFIG_LOCAL'),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,6 +166,9 @@ return [
         /*
          * Package Service Providers...
          */
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        Germey\Geetest\GeetestServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,6 +228,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*customs*/
+        'Geetest' => Germey\Geetest\Geetest::class
     ],
 
 ];

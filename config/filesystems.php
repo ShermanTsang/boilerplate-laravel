@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
+    'cloud' => env('FILESYSTEM_CLOUD', 'qiniu'),
 
     /*
     |--------------------------------------------------------------------------
@@ -61,6 +61,19 @@ return [
             'secret' => env('AWS_SECRET'),
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
+        ],
+
+        'qiniu' => [
+            'driver' => 'qiniu',
+            'domains' => [
+                'default' => env('QINIU_CUSTOM_DOMAIN'),
+                'https' => env('QINIU_HTTPS_DOMAIN'),
+                'custom' => env('QINIU_CUSTOM_DOMAIN'),
+            ],
+            'access_key' => env('QINIU_AK'),
+            'secret_key' => env('QINIU_SK'),
+            'bucket' => env('QINIU_BUCKET'),
+            'notify_url' => '',
         ],
 
     ],

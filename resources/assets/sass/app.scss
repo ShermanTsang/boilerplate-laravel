@@ -1,9 +1,27 @@
+html {
+  font-family: "Microsoft YaHei", Sans-serif, STXihei, Arial, Verdana;
+  background-color: #fff;
+  height: 100%;
+  a:link, a:hover, a:visited {
+    text-decoration: none !important;
+  }
+}
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+#body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-// Variables
-@import "variables";
+header {
+  flex: 0 0 auto;
+  margin-bottom: 20px;
+}
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}

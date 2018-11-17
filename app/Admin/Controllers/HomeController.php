@@ -17,7 +17,7 @@ class HomeController extends Controller
 
             $content->header('控制面板');
             $content->description('Index...');
-
+            
             $content->row(function (Row $row) {
 
                 $row->column(4, function (Column $column) {

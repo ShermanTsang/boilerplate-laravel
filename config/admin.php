@@ -15,7 +15,7 @@ return [
     /*
      * Mini-logo in admin panel header.
      */
-    'logo-mini' => '<b>'.env('APP_NAME_SHORT').'</b>',
+    'logo-mini' => '<b>' . env('APP_NAME_SHORT') . '</b>',
 
     /*
      * Route configration.
@@ -153,6 +153,10 @@ return [
     'extensions' => [
         'media-manager' => [
             'disk' => 'public'
+        ],
+        'env-manager' => [
+            // If the value is set to false, this extension will be disabled
+            'enable' => true
         ],
     ],
 ];

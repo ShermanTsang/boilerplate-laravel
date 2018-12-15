@@ -20,13 +20,13 @@ class TagsInput extends Field
     {
         $this->script = <<<EOT
         
-$('#{$this->id}').tagsInput({
+            $('#{$this->id}').tagsInput({
                 'width': '100%',
-                'height':'60px',
+                'height':'40px',
                 'defaultText': '+ 添加',
                 'removeWithBackspace': true,
                 'minChars': 1,
-                'maxChars': 0,
+                'maxChars': 100,
                 'placeholderColor': '#666666'
             })
 

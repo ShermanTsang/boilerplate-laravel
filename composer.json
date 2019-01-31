@@ -23,6 +23,7 @@
     "laravel-admin-ext/redis-manager": "^1.0",
     "laravel/framework": "5.7.*",
     "laravel/tinker": "^1.0",
+    "sharemant/laravel-admin-ext-editormd": "^1.0",
     "zgldh/qiniu-laravel-storage": "^0.10"
   },
   "require-dev": {

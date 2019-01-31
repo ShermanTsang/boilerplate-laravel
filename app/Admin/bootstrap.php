@@ -22,7 +22,7 @@ use App\Admin\Extensions\Simditor;
 use App\Admin\Extensions\TagsInput;
 use Encore\Admin\Form;
 
-Form::forget(['editor']);
+Form::forget(['editor', 'map']);
 Form::extend('simditor', Simditor::class);
 Form::extend('tagsInput', TagsInput::class);
 

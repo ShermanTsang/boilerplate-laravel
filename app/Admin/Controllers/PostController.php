@@ -104,12 +104,14 @@ class PostController extends Controller
     {
         return Admin::form(Post::class, function (Form $form) {
 
+            $form->editormd('content', '内容');
+
             $form->tab('基础信息', function ($form) {
 
-                $form->text('title','标题');
-                $form->text('status','状态');
-                $form->datetime('created_at','创建时间')->default(date('Y-m-d HH:mm:ss'))->format('YYYY-MM-DD HH:mm:ss');
-                $form->text('category','分类');
+                $form->text('title', '标题');
+                $form->text('status', '状态');
+                $form->datetime('created_at', '创建时间')->default(date('Y-m-d HH:mm:ss'))->format('YYYY-MM-DD HH:mm:ss');
+                $form->text('category', '分类');
                 $form->image('image')->move('postImages')->uniqueName();
                 $states = [
                     'on' => ['value' => 1, 'text' => '显示', 'color' => 'success'],
@@ -119,8 +121,8 @@ class PostController extends Controller
 
             })->tab('内容编辑', function ($form) {
 
-                $form->textarea('description','描述');
-                $form->simditor('content','内容');
+                $form->textarea('description', '描述');
+//                $form->simditor('content','内容');
 
             });
 

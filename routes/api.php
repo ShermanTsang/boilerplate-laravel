@@ -13,8 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::post('/upload/image', ['uses' => 'ApiController@uploadImage', 'as' => 'api.upload.image']);
+// Upload
+Route::post('/upload/image/simditor', ['uses' => 'ApiController@uploadImageForSimditor', 'as' => 'api.upload.image.simditor']);
+Route::post('/upload/image/editormd', ['uses' => 'ApiController@uploadImageForEditormd', 'as' => 'api.upload.image.editormd']);

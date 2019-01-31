@@ -24,25 +24,17 @@ class Simditor extends Field
 
     public function render()
     {
-        $url = route('api.upload.image');
+        $token = csrf_token();
+        $config = json_encode((array)config('admin.extensions.simditor.config'));
         $this->script = <<<EOT
         
-var toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', 'alignment','|','html'];
-var editor = new Simditor({
-  textarea: $('#{$this->id}'),
-  toolbar: toolbar,
-  upload: true,
-  pasteImage: true,
-  toolbar: true,
-  upload: {
-		    url : '{$url}',
-		    params: null,
-		    fileKey: 'upload_file', 
-		    connectionCount: 3,
-		    leaveConfirm: '正在上传文件，确定要离开吗'
-		  }
-});
-
+        var config = {$config}
+        config['textarea'] = $('#{$this->id}')
+        config['upload']['params'] = {_token: '{$token}'}
+        $(document).ready(function(){
+            var editor = new Simditor(config);
+        });
+        
 EOT;
         return parent::render();
     }

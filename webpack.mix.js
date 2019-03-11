@@ -11,19 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
-const CssList = [
-    'public/vendor/toastr/toastr.min.css',
-    'public/vendor/autoMenu/autoMenu.css',
-    'public/vendor/highlight/highlight.min.css'
-];
+const CssList = [];
 
-const jsList = [
-    'public/vendor/jquery/jquery-3.2.1.min.js',
-    'public/vendor/toastr/toastr.min.js',
-    'public/vendor/autoMenu/autoMenu.js',
-    'public/vendor/highlight/highlight.min.js',
-    'public/vendor/lazyload/jquery.lazyload.min.js'
-];
+const jsList = [];
 
 const markdownVendorList = [
     'public/vendor/laravel-admin-ext/editormd/editormd-1.5.0/lib/marked.min.js',
@@ -37,8 +27,9 @@ const markdownVendorList = [
 ];
 
 mix.sass('resources/assets/sass/app.scss', 'public/css/build/app.css')
-    .scripts(jsList, 'public/js/packages.js')
-    .styles(CssList, 'public/css/packages.css')
-    .scripts(markdownVendorList, 'public/js/build/markdown-support.js')
+    .js('resources/assets/js/app.js', 'public/js/build/js.app')
+    // .scripts(jsList, 'public/js/build/packages.js')
+    // .styles(CssList, 'public/css/build/packages.css')
+    // .scripts(markdownVendorList, 'public/js/build/markdown-support.js')
     .version();
 

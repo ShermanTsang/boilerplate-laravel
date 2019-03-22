@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
+use zgldh\QiniuStorage\QiniuStorage;
 
 if (!function_exists('getQiNiuCdnLink')) {
     function getQiNiuCdnLink($type = null)
@@ -25,14 +26,35 @@ if (!function_exists('getQiNiuCdnLink')) {
     }
 }
 
-if (!function_exists('getAsset')) {
-    function getAsset($name)
+if (!function_exists('getQiNiuCdnAsset')) {
+    function getQiNiuCdnAsset($key)
     {
-        $key = DB::table('resources')->where('name', $name)->value('key');
+        $disk = QiniuStorage::disk('qiniu');
+        $url = $disk->get($key);
+        return getQiNiuCdnLink() . $url;
+    }
+}
+
+if (!function_exists('getFileAsset')) {
+    function getFileAsset($key)
+    {
+        $key = DB::table('admin_file_assets')->where('key', $key)->value('url');
         if ($key) {
             return getQiNiuCdnLink() . $key;
         } else {
-            return $name . " - asset is not in recorder.";
+            return $key . " - file asset is not in recorder.";
+        }
+    }
+}
+
+if (!function_exists('getImageAsset')) {
+    function getImageAsset($key)
+    {
+        $key = DB::table('admin_image_assets')->where('key', $key)->value('url');
+        if ($key) {
+            return getQiNiuCdnLink() . $key;
+        } else {
+            return $key . " - image asset is not in recorder.";
         }
     }
 }

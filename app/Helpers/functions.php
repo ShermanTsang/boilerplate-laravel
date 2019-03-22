@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
-use zgldh\QiniuStorage\QiniuStorage;
 
 if (!function_exists('getQiNiuCdnLink')) {
     function getQiNiuCdnLink($type = null)
@@ -27,11 +26,9 @@ if (!function_exists('getQiNiuCdnLink')) {
 }
 
 if (!function_exists('getQiNiuCdnAsset')) {
-    function getQiNiuCdnAsset($key)
+    function getQiNiuCdnAsset($path)
     {
-        $disk = QiniuStorage::disk('qiniu');
-        $url = $disk->get($key);
-        return getQiNiuCdnLink() . $url;
+        return getQiNiuCdnLink() . $path;
     }
 }
 

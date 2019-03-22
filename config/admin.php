@@ -230,7 +230,7 @@ return [
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
     */
-    'skin' => 'skin-blue-light',
+    'skin' => 'skin-black-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -244,7 +244,7 @@ return [
     | "sidebar-mini".
     |
     */
-    'layout' => ['sidebar-mini', 'sidebar-collapse'],
+    'layout' => ['sidebar-collapse'],
 
     /*
     |--------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+.pagination {
+  display: block;
+  margin: 10px auto;
+  list-style: none;
+  text-align: center;
+
+  .page-item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    text-align: center;
+    color: #666666;
+
+    a {
+      color: #666666;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $theme-color;
+    }
+  }
+
+  .disabled {
+    cursor: default;
+  }
+
+  .active {
+    background-color: $theme-color;
+    color: #ffffff;
+    border-radius: 4px;
+  }
+}

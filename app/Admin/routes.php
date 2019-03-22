@@ -16,5 +16,7 @@ Route::group([
     $router->resource('posts', PostController::class);
     $router->resource('menus', MenuController::class);
     $router->resource('comments', CommentController::class);
+    $router->resource('imageAssets', ImageAssetController::class);
+    $router->resource('fileAssets', FileAssetController::class);
 
 });

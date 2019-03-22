@@ -6,7 +6,7 @@ use Encore\Admin\Form\Field;
 
 class TagsInput extends Field
 {
-    protected $view = 'component.tagsInput';
+    protected $view = 'component.tags-input';
 
     protected static $css = [
         '/vendor/tagsInput/jquery.tagsinput.css',

@@ -2,25 +2,37 @@
 
 use Illuminate\Support\Facades\DB;
 
-if (!function_exists('getCdn')) {
-    function getCdn()
+if (!function_exists('getQiNiuCdnLink')) {
+    function getQiNiuCdnLink($type = null)
     {
-        if (env('QINIU_CUSTOM_DOMAIN')) {
-            return '//' . env('QINIU_CUSTOM_DOMAIN') . '/';
+        if ($type) {
+            if (strtoupper($type) === 'default') {
+                return env('QINIU_DEFAULT_DOMAIN') ? 'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ env -> QINIU_DEFAULT_DOMAIN is empty ]';
+            }
+            if (strtoupper($type) === 'https') {
+                return env('QINIU_HTTPS_DOMAIN') ? 'http://' . env('QINIU_HTTPS_DOMAIN') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
+            }
+            if (strtoupper($type) === 'custom') {
+                return env('QINIU_CUSTOM_DOMAIN') ? 'http://' . env('QINIU_CUSTOM_DOMAIN') . '/' : '[ env -> QINIU_CUSTOM_DOMAIN is empty ]';
+            }
+            return ' invalid parameter.';
         } else {
-            return "[CDN未配置]";
+            return env('QINIU_HTTPS_DOMAIN') ?
+                'https://' . env('QINIU_HTTPS_DOMAIN') . '/' : env('QINIU_CUSTOM_DOMAIN') ?
+                    '//' . env('QINIU_CUSTOM_DOMAIN') . '/' : env('QINIU_DEFAULT_DOMAIN') ?
+                        'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ Please set QiNiuCDN link.]';
         }
     }
 }
 
-if (!function_exists('getImage')) {
-    function getImage($name)
+if (!function_exists('getAsset')) {
+    function getAsset($name)
     {
         $key = DB::table('resources')->where('name', $name)->value('key');
         if ($key) {
-            return '//' . env('QINIU_CUSTOM_DOMAIN') . '/' . $key . '?imageView2/0/q/80|imageslim';
+            return getQiNiuCdnLink() . $key;
         } else {
-            return "[\"" . $name . "\"参数未设定]";
+            return $name . " - asset is not in recorder.";
         }
     }
 }

@@ -33,7 +33,7 @@ class CommentController extends Controller
         Cookie::queue('userEmail', $comment->email, 3600);
         Cookie::queue('userSite', $comment->site, 3600);
 
-        return redirect()->back()->with('position', 'comment')->with('notify', '评论成功');
+        return redirect()->back()->with('position', 'comment')->with('notify', ['type' => 'success', 'text' => '评论成功']);
     }
 
 }

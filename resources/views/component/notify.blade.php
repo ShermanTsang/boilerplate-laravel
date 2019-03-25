@@ -14,17 +14,8 @@
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         };
-        @if(!empty(session('notifyInfo')))
-        toastr.info('{{session('notifyInfo')}}');
-        @endif
-        @if(!empty(session('notifySuccess')))
-        toastr.success('{{session('notifySuccess')}}');
-        @endif
-        @if(!empty(session('notifyWarning')))
-        toastr.warning('{{session('notifyWarning')}}');
-        @endif
-        @if(!empty(session('notifyError')))
-        toastr.error('{{session('notifyError')}}');
+        @if(!empty(session('notify')))
+        {!! 'toastr.' . session('notify')['type'] . '("' . session('notify')['text'] .'");' !!}
         @endif
     })
 </script>

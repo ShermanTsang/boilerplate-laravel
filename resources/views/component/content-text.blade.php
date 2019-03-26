@@ -2,10 +2,6 @@
     $id = uniqid();
 @endphp
 
-@push('header')
-    <script type="text/javascript" src="{{asset('js/build/markdown-support.js')}}"></script>
-@endpush
-
 <div class="post">
     <div id="content" class="content">
         @if( $type === 'markdown' )
@@ -21,9 +17,11 @@
 </div>
 
 @push('footer')
+    @if($type === 'markdown')
+        <script type="text/javascript" src="{{asset('js/build/markdown-support.js')}}"></script>
+    @endif
     <script>
-        let content;
-        let contentBody = $(".content-body");
+        var content;
         $(function () {
             @if( $type === 'markdown' )
                 content = editormd.markdownToHTML("content-markdown-{{$id}}", {
@@ -37,18 +35,6 @@
                 // tocContainer: "#catalog"
             });
             @endif
-            // Warping img tag
-            contentBody.find("img").each(function () {
-                $(this).attr('data-original', $(this).attr('src'));
-                $(this).removeAttr('src');
-                $(this).wrap('<a data-fancybox="gallery" href="' + $(this).attr('data-original') + '"></a>');
-            });
-            // Warping table
-            contentBody.find("table").each(function () {
-                $(this).wrapAll("<div class='table-container'></div>")
-            });
-            // LazyLoad activator
-            $("img").lazyload({effect: "fadeIn"});
         });
     </script>
 @endpush

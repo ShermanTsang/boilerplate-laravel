@@ -82,7 +82,7 @@ class MenuController extends Controller
                 'on' => ['value' => 1, 'text' => '显示', 'color' => 'primary'],
                 'off' => ['value' => 0, 'text' => '隐藏', 'color' => 'default'],
             ];
-            $grid->display()->switch($states);
+            $grid->isDisplay()->switch($states);
 
             $grid->filter(function ($filter) {
                 $filter->useModal();
@@ -111,7 +111,7 @@ class MenuController extends Controller
                 'on' => ['value' => 1, 'text' => '显示', 'color' => 'success'],
                 'off' => ['value' => 0, 'text' => '隐藏', 'color' => 'danger'],
             ];
-            $form->switch('display', '显示状态')->states($states)->default(1);
+            $form->switch('isDisplay', '显示状态')->states($states)->default(1);
         });
     }
 }

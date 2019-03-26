@@ -315,6 +315,9 @@ return [
     |
     */
     'extensions' => [
+        'cropper' => [
+            'enable' => true,
+        ],
         'simditor' => [
             'enable' => true,
             'config' => [

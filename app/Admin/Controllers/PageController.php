@@ -105,13 +105,13 @@ class PageController extends Controller
             $form->text('link', '连接');
             $form->image('image', '图片')->move('PageCover');
             $form->number('order', '顺序');
-            $form->textarea('description');
-            $form->simditor('content');
+            $form->textarea('description', '简述');
+            $form->simditor('content', '内容');
             $states = [
                 'on' => ['value' => 1, 'text' => '显示', 'color' => 'success'],
                 'off' => ['value' => 0, 'text' => '隐藏', 'color' => 'danger'],
             ];
-            $form->switch('display', 'display')->states($states)->default(1);
+            $form->switch('isDisplay', '是否显示')->states($states)->default(1);
         });
     }
 }

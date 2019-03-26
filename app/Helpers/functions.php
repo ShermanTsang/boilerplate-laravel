@@ -56,22 +56,6 @@ if (!function_exists('getImageAsset')) {
     }
 }
 
-if (!function_exists('getMenuDisplay')) {
-    function getMenuDisplay()
-    {
-        $nav = DB::table('menus')->where('display', 1)->orderBy('order')->get();
-        return $nav;
-    }
-}
-
-if (!function_exists('getPageDisplay')) {
-    function getPageDisplay()
-    {
-        $nav = DB::table('pages')->where('display', 1)->get();
-        return $nav;
-    }
-}
-
 if (!function_exists('getEmailAvatar')) {
     function getEmailAvatar($email, $size = '200', $default = 'retro')
     {

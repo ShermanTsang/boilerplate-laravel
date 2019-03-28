@@ -10,7 +10,7 @@ if (!function_exists('getQiNiuCdnLink')) {
                 return env('QINIU_DEFAULT_DOMAIN') ? 'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ env -> QINIU_DEFAULT_DOMAIN is empty ]';
             }
             if (strtoupper($type) === 'https') {
-                return env('QINIU_HTTPS_DOMAIN') ? 'http://' . env('QINIU_HTTPS_DOMAIN') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
+                return env('QINIU_HTTPS_DOMAIN') ? 'https://' . env('QINIU_HTTPS_DOMAIN') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
             }
             if (strtoupper($type) === 'custom') {
                 return env('QINIU_CUSTOM_DOMAIN') ? 'http://' . env('QINIU_CUSTOM_DOMAIN') . '/' : '[ env -> QINIU_CUSTOM_DOMAIN is empty ]';

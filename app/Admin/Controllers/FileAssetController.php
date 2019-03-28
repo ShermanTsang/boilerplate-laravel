@@ -68,7 +68,7 @@ class FileAssetController extends Controller
     {
         return Admin::grid(FileAsset::class, function (Grid $grid) {
 
-            $grid->model()->orderBy('id', 'desc');
+            $grid->model()->orderBy('key', 'desc');
             $grid->key('资源标识')->editable();
             $grid->name('资源名称')->sortable();
             $grid->url('文件地址')->limit(30);
@@ -92,7 +92,7 @@ class FileAssetController extends Controller
     {
         return Admin::form(FileAsset::class, function (Form $form) {
             $form->display('id');
-            $form->image('url', '文件上传')->move('FileAsset')->help('请压缩文件之后再上传，否则会造成网站访问速度慢');
+            $form->file('url', '文件上传')->move('FileAsset')->help('请压缩文件之后再上传，否则会造成网站访问速度慢');
             $form->text('key', '资源标识')->help('非技术人员，请不要修改此项');
             $form->text('name', '资源名称')->required();
             $form->textarea('description', '设置描述')->help('非技术人员，请不要修改此项');

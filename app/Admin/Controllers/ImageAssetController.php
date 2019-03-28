@@ -68,7 +68,7 @@ class ImageAssetController extends Controller
     {
         return Admin::grid(ImageAsset::class, function (Grid $grid) {
 
-            $grid->model()->orderBy('id', 'desc');
+            $grid->model()->orderBy('key', 'desc');
             $grid->key('资源标识')->editable();
             $grid->name('资源名称')->sortable();
             $grid->url('图片地址')->image(getQiNiuCdnLink(), '100', '60');

@@ -25,10 +25,26 @@ if (!function_exists('getQiNiuCdnLink')) {
     }
 }
 
+if (!function_exists('isIncludeBaseUrl')) {
+    function isIncludeBaseUrl($originPath)
+    {
+        return preg_match('/(^http:\/\/)|(^https:\/\/)|(^\/\/)/i', $originPath);
+    }
+}
+
+if (!function_exists('getCleanAssetUrl')) {
+    function getCleanAssetUrl($originPath)
+    {
+        return isIncludeBaseUrl($originPath) ?
+            preg_replace('/((^http:\/\/)|(^https:\/\/)|(^\/\/))(.*?\/)/i', '', $originPath) :
+            $originPath;
+    }
+}
+
 if (!function_exists('getQiNiuCdnAsset')) {
     function getQiNiuCdnAsset($path)
     {
-        return getQiNiuCdnLink() . $path;
+        return getQiNiuCdnLink() . getCleanAssetUrl($path);
     }
 }
 
@@ -49,7 +65,7 @@ if (!function_exists('getImageAsset')) {
     {
         $key = DB::table('admin_image_assets')->where('key', $key)->value('url');
         if ($key) {
-            return getQiNiuCdnLink() . $key;
+            return getQiNiuCdnLink() . getCleanAssetUrl($key);
         } else {
             return $key . " - image asset is not in recorder.";
         }

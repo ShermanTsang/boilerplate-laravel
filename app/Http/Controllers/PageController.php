@@ -9,7 +9,12 @@ class PageController extends Controller
 
     public function item($link)
     {
-        $page = Page::where('display',1)->where('link', $link)->first();
+        $page = Page::where('isDisplay', 1)->where('name', $name)->first();
+        if ($page) {
+            return view('page.show', compact('page'));
+        } else {
+            return redirect('/');
+        }
         return view('page.show', compact('page'));
     }
 

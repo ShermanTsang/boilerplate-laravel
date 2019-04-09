@@ -7,7 +7,7 @@ use App\Page;
 class PageController extends Controller
 {
 
-    public function item($link)
+    public function item($name)
     {
         $page = Page::where('isDisplay', 1)->where('name', $name)->first();
         if ($page) {
@@ -15,7 +15,6 @@ class PageController extends Controller
         } else {
             return redirect('/');
         }
-        return view('page.show', compact('page'));
     }
 
 }

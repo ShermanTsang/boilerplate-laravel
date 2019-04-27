@@ -6,13 +6,13 @@ if (!function_exists('getQiNiuCdnLink')) {
     function getQiNiuCdnLink($type = null)
     {
         if ($type) {
-            if (strtoupper($type) === 'default') {
+            if (strtoupper($type) === 'DEFAULT') {
                 return env('QINIU_DEFAULT_DOMAIN') ? 'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ env -> QINIU_DEFAULT_DOMAIN is empty ]';
             }
-            if (strtoupper($type) === 'https') {
+            if (strtoupper($type) === 'HTTPS') {
                 return env('QINIU_HTTPS_DOMAIN') ? 'https://' . env('QINIU_HTTPS_DOMAIN') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
             }
-            if (strtoupper($type) === 'custom') {
+            if (strtoupper($type) === 'CUSTOM') {
                 return env('QINIU_CUSTOM_DOMAIN') ? 'http://' . env('QINIU_CUSTOM_DOMAIN') . '/' : '[ env -> QINIU_CUSTOM_DOMAIN is empty ]';
             }
             return ' invalid parameter.';

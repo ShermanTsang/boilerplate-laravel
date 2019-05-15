@@ -48,6 +48,8 @@ return [
     */
     'route' => [
 
+        'domain' => env('ADMIN_DOMAIN', 'admin.your-domain.com'),
+
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
         'namespace' => 'App\\Admin\\Controllers',

@@ -8,7 +8,7 @@
     <title>@yield('title'){{config('siteName') ?? ''}}</title>
     <meta name="keywords" content="{{config('siteKeywords') ?? ''}},@yield('keywords')">
     <meta name="description" content="{{config('siteDescription') ?? ''}} @yield('description')">
-    <link rel="stylesheet" type="text/css" href="{{mix('/css/build/app.css') ?? ''}}">
+    <link rel="stylesheet" type="text/css" href="{{mix('css/build/app.css') ?? ''}}">
     <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;}</script>
     @yield('header')
     @stack('header')
@@ -23,7 +23,7 @@
 <footer>
     @include('layout.footer')
 </footer>
-<script type="text/javascript" src="{{mix('/js/build/app.js')}}"></script>
+<script type="text/javascript" src="{{mix('js/build/app.js')}}"></script>
 @include('component.notify')
 @yield('footer')
 @stack('footer')

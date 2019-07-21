@@ -37,12 +37,10 @@
   },
   "autoload": {
     "classmap": [
-      "database",
-      "app/Models"
+      "database"
     ],
     "psr-4": {
-      "App\\": "app/",
-      "Models\\": "app/Models/"
+      "App\\": "app/"
     },
     "files": [
       "app/Helpers/functions.php"

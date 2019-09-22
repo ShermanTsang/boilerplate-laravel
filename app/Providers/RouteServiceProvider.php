@@ -66,8 +66,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         $apiRouter = base_path("routes/api.php");
-        if (file_exists($apiRouter) && env('API_DOMAIN')) {
-            Route::domain(env('API_DOMAIN', 'api.your-domain.com'))
+        if (file_exists($apiRouter) && config('domain.api')) {
+            Route::domain(config('domain.api', 'api.your-domain.com'))
                 ->middleware('api')
                 ->namespace($this->namespace)
                 ->group($apiRouter);

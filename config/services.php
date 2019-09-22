@@ -35,4 +35,20 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'qiniu' => [
+        'ak' => env('QINIU_AK'),
+        'sk' => env('QINIU_SK'),
+        'bucket' => env('QINIU_BUCKET'),
+        'domain' => [
+            'default' => env('QINIU_DEFAULT_DOMAIN'),
+            'custom' => env('QINIU_CUSTOM_DOMAIN'),
+            'https' => env('QINIU_HTTPS_DOMAIN'),
+        ]
+    ],
+
+    'geetest' => [
+        'id' => env('GEETEST_ID'),
+        'key' => env('GEETEST_KEY'),
+    ]
+
 ];

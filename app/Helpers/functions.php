@@ -7,20 +7,20 @@ if (!function_exists('getQiNiuCdnLink')) {
     {
         if ($type) {
             if (strtoupper($type) === 'DEFAULT') {
-                return env('QINIU_DEFAULT_DOMAIN') ? 'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ env -> QINIU_DEFAULT_DOMAIN is empty ]';
+                return config('services.qiniu.domain.default') ? 'http://' . config('services.qiniu.domain.default') . '/' : '[ env -> QINIU_DEFAULT_DOMAIN is empty ]';
             }
             if (strtoupper($type) === 'HTTPS') {
-                return env('QINIU_HTTPS_DOMAIN') ? 'https://' . env('QINIU_HTTPS_DOMAIN') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
+                return config('services.qiniu.domain.https') ? 'https://' . config('services.qiniu.domain.https') . '/' : '[ env -> QINIU_HTTPS_DOMAIN is empty ]';
             }
             if (strtoupper($type) === 'CUSTOM') {
-                return env('QINIU_CUSTOM_DOMAIN') ? 'http://' . env('QINIU_CUSTOM_DOMAIN') . '/' : '[ env -> QINIU_CUSTOM_DOMAIN is empty ]';
+                return config('services.qiniu.domain.custom') ? 'http://' . config('services.qiniu.domain.custom') . '/' : '[ env -> QINIU_CUSTOM_DOMAIN is empty ]';
             }
             return ' invalid parameter.';
         } else {
-            return env('QINIU_HTTPS_DOMAIN') ?
-                'https://' . env('QINIU_HTTPS_DOMAIN') . '/' : env('QINIU_CUSTOM_DOMAIN') ?
-                    '//' . env('QINIU_CUSTOM_DOMAIN') . '/' : env('QINIU_DEFAULT_DOMAIN') ?
-                        'http://' . env('QINIU_DEFAULT_DOMAIN') . '/' : '[ Please set QiNiuCDN link.]';
+            return config('services.qiniu.domain.https') ?
+                'https://' . config('services.qiniu.domain.https') . '/' : config('services.qiniu.domain.custom') ?
+                    '//' . config('services.qiniu.domain.custom') . '/' : config('services.qiniu.domain.default') ?
+                        'http://' . config('services.qiniu.domain.default') . '/' : '[ Please set QiNiuCDN link.]';
         }
     }
 }

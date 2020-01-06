@@ -17,10 +17,16 @@ if (!function_exists('getQiNiuCdnLink')) {
             }
             return ' invalid parameter.';
         } else {
-            return config('services.qiniu.domain.https') ?
-                'https://' . config('services.qiniu.domain.https') . '/' : config('services.qiniu.domain.custom') ?
-                    '//' . config('services.qiniu.domain.custom') . '/' : config('services.qiniu.domain.default') ?
-                        'http://' . config('services.qiniu.domain.default') . '/' : '[ Please set QiNiuCDN link.]';
+            if (config('services.qiniu.domain.https')) {
+                return 'https://' . config('services.qiniu.domain.https') . '/';
+            }
+            if (config('services.qiniu.domain.custom')) {
+                return '//' . config('services.qiniu.domain.custom') . '/';
+            }
+            if (config('services.qiniu.domain.default')) {
+                return 'http://' . config('services.qiniu.domain.default') . '/';
+            }
+            return '[ Please set QiNiuCDN link.]';
         }
     }
 }

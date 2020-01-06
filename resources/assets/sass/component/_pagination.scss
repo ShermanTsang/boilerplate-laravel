@@ -17,7 +17,7 @@
     }
 
     &:hover {
-      border-bottom: 2px solid $theme-color;
+        border-bottom: 2px solid red;
     }
   }
 
@@ -26,8 +26,8 @@
   }
 
   .active {
-    background-color: $theme-color;
-    color: #ffffff;
-    border-radius: 4px;
+      background-color: red;
+      color: #ffffff;
+      border-radius: 4px;
   }
 }

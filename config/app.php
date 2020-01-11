@@ -167,7 +167,6 @@ return [
          * Package Service Providers...
          */
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
-        Germey\Geetest\GeetestServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
 
         /*

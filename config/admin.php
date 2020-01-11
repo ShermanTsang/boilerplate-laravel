@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => env('APP_NAME') . 'admin',
+    'logo' => env('APP_NAME') . 'Admin',
 
     /*
     |--------------------------------------------------------------------------

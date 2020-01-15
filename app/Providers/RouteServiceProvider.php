@@ -51,9 +51,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+        $webRouter = base_path("routes/web.php");
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group($webRouter);
     }
 
     /**
@@ -66,11 +67,17 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         $apiRouter = base_path("routes/api.php");
-        if (file_exists($apiRouter) && config('domain.api')) {
-            Route::domain(config('domain.api', 'api.your-domain.com'))
-                ->middleware('api')
-                ->namespace($this->namespace)
-                ->group($apiRouter);
+        if (file_exists($apiRouter)) {
+            if (config('domain.api')) {
+                Route::domain(config('domain.api', 'api.your-domain.com'))
+                    ->middleware('api')
+                    ->namespace($this->namespace)
+                    ->group($apiRouter);
+            } else {
+                Route::middleware('api')
+                    ->namespace($this->namespace)
+                    ->group($apiRouter);
+            }
         }
     }
 }

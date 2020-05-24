@@ -11,7 +11,9 @@ return [
     | login page.
     |
     */
-    'name' => env('APP_NAME'),
+    'name' => 'Laravel-admin',
+
+    'locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +24,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => env('APP_NAME') . 'Admin',
+    'logo' => '<b>Laravel</b> admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -38,6 +40,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Laravel-admin bootstrap setting
+    |--------------------------------------------------------------------------
+    |
+    | This value is the path of laravel-admin bootstrap file.
+    |
+    */
+    'bootstrap' => app_path('Admin/bootstrap.php'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Laravel-admin route settings
     |--------------------------------------------------------------------------
     |
@@ -47,8 +59,6 @@ return [
     |
     */
     'route' => [
-
-        'domain' => env('ADMIN_DOMAIN', 'admin.your-domain.com'),
 
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
@@ -104,9 +114,11 @@ return [
 
         'controller' => App\Admin\Controllers\AuthController::class,
 
+        'guard' => 'admin',
+
         'guards' => [
             'admin' => [
-                'driver' => 'session',
+                'driver'   => 'session',
                 'provider' => 'admin',
             ],
         ],
@@ -114,12 +126,22 @@ return [
         'providers' => [
             'admin' => [
                 'driver' => 'eloquent',
-                'model' => Encore\Admin\Auth\Database\Administrator::class,
+                'model'  => Encore\Admin\Auth\Database\Administrator::class,
             ],
         ],
 
         // Add "remember me" to login form
         'remember' => true,
+
+        // Redirect to the specified URI when user is not authorized.
+        'redirect_to' => 'auth/login',
+
+        // The URIs that should be excluded from authorization.
+        'excepts' => [
+            'auth/login',
+            'auth/logout',
+            '_handle_action_',
+        ],
     ],
 
     /*
@@ -134,12 +156,12 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'qiniu',
+        'disk' => 'admin',
 
         // Image and file upload path under the disk above.
         'directory' => [
             'image' => 'images',
-            'file' => 'files',
+            'file'  => 'files',
         ],
     ],
 
@@ -173,11 +195,11 @@ return [
         'menu_model' => Encore\Admin\Auth\Database\Menu::class,
 
         // Pivot table for table above.
-        'operation_log_table' => 'admin_operation_log',
+        'operation_log_table'    => 'admin_operation_log',
         'user_permissions_table' => 'admin_user_permissions',
-        'role_users_table' => 'admin_role_users',
+        'role_users_table'       => 'admin_role_users',
         'role_permissions_table' => 'admin_role_permissions',
-        'role_menu_table' => 'admin_role_menu',
+        'role_menu_table'        => 'admin_role_menu',
     ],
 
     /*
@@ -210,13 +232,37 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Indicates whether to check route permission.
+    |--------------------------------------------------------------------------
+    */
+    'check_route_permission' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Indicates whether to check menu roles.
+    |--------------------------------------------------------------------------
+    */
+    'check_menu_roles'       => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | User default avatar
+    |--------------------------------------------------------------------------
+    |
+    | Set a default avatar for newly created users.
+    |
+    */
+    'default_avatar' => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
+
+    /*
+    |--------------------------------------------------------------------------
     | Admin map field provider
     |--------------------------------------------------------------------------
     |
     | Supported: "tencent", "google", "yandex".
     |
     */
-    'map_provider' => 'tencent',
+    'map_provider' => 'google',
 
     /*
     |--------------------------------------------------------------------------
@@ -232,7 +278,7 @@ return [
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
     */
-    'skin' => 'skin-black-light',
+    'skin' => 'skin-blue-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -246,7 +292,7 @@ return [
     | "sidebar-mini".
     |
     */
-    'layout' => ['sidebar-collapse'],
+    'layout' => ['sidebar-mini', 'sidebar-collapse'],
 
     /*
     |--------------------------------------------------------------------------
@@ -296,6 +342,41 @@ return [
     | Whether enable default breadcrumb for every page content.
     */
     'enable_default_breadcrumb' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable/Disable assets minify
+    |--------------------------------------------------------------------------
+    */
+    'minify_assets' => [
+
+        // Assets will not be minified.
+        'excepts' => [
+
+        ],
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable/Disable sidebar menu search
+    |--------------------------------------------------------------------------
+    */
+    'enable_menu_search' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Alert message that will displayed on top of the page.
+    |--------------------------------------------------------------------------
+    */
+    'top_alert' => '',
+
+    /*
+    |--------------------------------------------------------------------------
+    | The global Grid action display class.
+    |--------------------------------------------------------------------------
+    */
+    'grid_action_class' => \Encore\Admin\Grid\Displayers\DropdownActions::class,
 
     /*
     |--------------------------------------------------------------------------

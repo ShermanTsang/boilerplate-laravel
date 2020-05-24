@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-    Hello
+    Hello ShareMan's Laravel Model
 @endsection
 @section('js')
 @endsection

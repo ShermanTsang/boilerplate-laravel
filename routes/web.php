@@ -20,6 +20,3 @@ Route::get('/', ['uses' => 'AppController@index', 'as' => 'index']);
 
 // Page
 Route::get('/{link}', ['uses' => 'PageController@item', 'as' => 'page.item']);
-
-// Comment
-Route::post('/comment/submit', ['uses' => 'CommentController@store', 'as' => 'comment.submit']);

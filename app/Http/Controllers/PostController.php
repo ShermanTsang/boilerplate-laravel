@@ -9,7 +9,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $post = Post::where('display','1')->get();
+        $post = Post::query()->where('display','1')->get();
         return view('post.index', compact('post'));
     }
 

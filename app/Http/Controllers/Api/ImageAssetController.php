@@ -18,7 +18,7 @@ class ImageAssetController extends Controller
 
     public function show($id)
     {
-        $imageAssetItem = new ConfigResource(ImageAsset::where('is_display', 1)->find($id));
+        $imageAssetItem = new ConfigResource(ImageAsset::query()->where('is_display', 1)->find($id));
         return api_success($imageAssetItem);
     }
 

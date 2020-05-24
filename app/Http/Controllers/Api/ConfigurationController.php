@@ -18,7 +18,7 @@ class ConfigurationController extends Controller
 
     public function show($id)
     {
-        $configurationItem = new ConfigResource(Configuration::where('is_display', 1)->find($id));
+        $configurationItem = new ConfigResource(Configuration::query()->where('is_display', 1)->find($id));
         return api_success($configurationItem);
     }
 

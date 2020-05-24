@@ -18,7 +18,7 @@ class FileAssetController extends Controller
 
     public function show($id)
     {
-        $fileAssetItem = new ConfigResource(FileAsset::where('is_display', 1)->find($id));
+        $fileAssetItem = new ConfigResource(FileAsset::query()->where('is_display', 1)->find($id));
         return api_success($fileAssetItem);
     }
 

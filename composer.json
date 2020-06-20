@@ -27,6 +27,7 @@
     },
     "require-dev": {
         "filp/whoops": "^2.0",
+        "kitloong/laravel-migrations-generator": "^4.3",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^4.1",

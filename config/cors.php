@@ -19,9 +19,7 @@ return [
 
     'allowed_methods' => ['GET', 'POST', 'PATCH', 'PUT', 'OPTIONS'],
 
-    'allowed_origins' => [
-        'https://test.com',
-    ],
+    'allowed_origins' => ['https://test.com',],
 
     'allowed_origins_patterns' => [],
 

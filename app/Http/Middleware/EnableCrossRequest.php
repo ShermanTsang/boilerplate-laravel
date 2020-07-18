@@ -17,7 +17,7 @@ class EnableCrossRequest
     {
         $response = $next($request);
         $origin = $request->server('HTTP_ORIGIN') ? $request->server('HTTP_ORIGIN') : '';
-        $allow_origin = config('cros.allowed_origins');
+        $allow_origin = config('cors.allowed_origins');
         if (in_array($origin, $allow_origin)) {
             $response->header('Access-Control-Allow-Origin', $origin);
             $response->header('Access-Control-Allow-Headers', implode( ',', config('cros.allowed_headers') ));

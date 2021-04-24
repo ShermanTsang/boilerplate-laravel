@@ -2,9 +2,164 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e72ec990-55f1-4248-ab26-c09f2092727f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README_Laravel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_2021_4_24_5_52.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/Controllers/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/Controllers/ExampleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/routes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_173148_create_admin_tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/css/adminlte.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/AdminLTELogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/boxed-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/boxed-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/default-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/img/user2-160x160.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/AdminLTE/js/adminlte.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/css/fileinput-rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/css/fileinput.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/img/loading-sm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/fileinput.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/LANG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/cr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/kr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/kz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/uz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/locales/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/plugins/piexif.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/plugins/purify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/js/plugins/sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-fileinput/themes/fas/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-iconpicker/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-iconpicker/dist/css/bootstrap-iconpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-iconpicker/dist/js/bootstrap-iconpicker.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-iconpicker/dist/js/bootstrap-iconpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap-input-spinner/bootstrap-input-spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-datetimepicker/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-duallistbox/bootstrap-duallistbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-toggle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-toggle/css/bootstrap4-toggle.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-toggle/js/bootstrap4-toggle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/bootstrap4-toggle/js/bootstrap4-toggle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/fontawesome-free/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/icheck-bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/icheck-bootstrap/icheck-bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/inputmask/min/jquery.inputmask.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/ion-rangeslider/css/ion.rangeSlider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/ion-rangeslider/js/ion.rangeSlider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/jquery-pjax/jquery.pjax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/jquery.initialize/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/jquery.initialize/jquery.initialize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/images/login-bg1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/images/login-bg2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/images/login-bg3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/images/login-bg4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/laravel-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/laravel-admin/laravel-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/moment/moment-with-locales.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/nestable/jquery.nestable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/nestable/nestable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/nprogress/nprogress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/nprogress/nprogress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/requirecss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/select2-bootstrap4-theme/select2-bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/select2/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/select2/js/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/sweetalert2/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/sweetalert2/sweetalert2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/treejs/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin/treejs/dist/tree.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/az/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fa/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/fr/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/he/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/id/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ja/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ko/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ms/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/nl/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pl/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pt/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ru/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/tr/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/uk/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ur/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-CN/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lab-Laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab-Laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +283,12 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/encore/laravel-admin" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rbuEsO2py7y4DagIaixEs3x0zF" />
@@ -174,7 +335,7 @@
       <updated>1619257003454</updated>
       <workItem from="1619257004616" duration="464000" />
       <workItem from="1619257505597" duration="416000" />
-      <workItem from="1619257932907" duration="1930000" />
+      <workItem from="1619257932907" duration="4884000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init project with laravel8">
       <created>1619258097946</created>
@@ -183,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619258097946</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="docs: add readme file">
+      <created>1619271191802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619271191802</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +359,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: init project with laravel8" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init project with laravel8" />
+    <MESSAGE value="docs: add readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: add readme file" />
   </component>
 </project>

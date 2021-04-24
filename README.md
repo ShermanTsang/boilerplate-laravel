@@ -16,3 +16,5 @@ This project mainly applies to myself personally.
 ## Integrated features
 
 ## Integrated packages
+Laravel-admin (encore/larave-admin)
+

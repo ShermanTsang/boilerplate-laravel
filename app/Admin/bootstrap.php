@@ -26,6 +26,16 @@ Admin::style(
     .main-footer {
         display: none !important;
     }
+    .datetime-column {
+        font-size: 0.9rem;
+        display: flex;
+        flex-flow: column;
+    }
+    .datetime-column-region {
+        color: #999;
+        margin-right: 3px;
+        font-size: 0.85rem;
+    }
     .embed-frame {
         position: relative;
         display: block;
@@ -42,6 +52,7 @@ Admin::style(
         bottom: 0;
         background-color: rgba(255,255,255,.9);
         height: 100%;
+        z-index: 98;
         width: 20px;
     }
     .embed-frame-web {
@@ -49,18 +60,37 @@ Admin::style(
         height: 100%;
         border: none;
     }
-    .embed-frame-link {
+    .embed-frame-button {
+        border: 1px solid #fff;
+        border-radius: 6px;
+        font-size: 0.96rem;
+        padding: 5px 10px;
+    }
+    .embed-frame-button a {
+        color: #fff;
+    }
+    .embed-frame-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
         position: absolute;
-        bottom: 0;
+        width: 100%;
+        top: 0;
         left: 0;
         right: 0;
-        padding: 8px 0;
-        font-size: 1.1rem;
-        text-align: center;
-        background-color: rgba(35,137,255,0.8);
+        padding: 10px 12px;
+        z-index: 99;
+        background-color: rgba(35,137,255,0.6);
+        transition: background-color 0.3s;
     }
-    .embed-frame-link a {
+    .embed-frame-header:hover {
+        background-color: rgba(35,137,255,0.95);
+    }
+    .embed-frame-name {
         color: #fff;
+        font-size: 1.1rem;
     }
 CSS
 );

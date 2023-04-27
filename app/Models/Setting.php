@@ -24,14 +24,6 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-enum TypeEnum: string
-{
-    case TEXT = 'TEXT';
-    case IMAGE_URL = 'IMAGE_URL';
-    case FILE_URL = 'FILE_URL';
-    case BOOLEAN = 'BOOLEAN';
-}
-
 class Setting extends Model
 {
     static array $TypeEnum = [

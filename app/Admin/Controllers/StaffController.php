@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\Staff;
+use App\Models\Staff;
 use App\Models\Staff as StaffModel;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

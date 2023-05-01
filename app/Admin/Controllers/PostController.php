@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\Post;
+use App\Models\Post;
 use App\Models\PostCategory;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

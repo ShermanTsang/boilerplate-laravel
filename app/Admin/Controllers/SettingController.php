@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\Setting;
+use App\Models\Setting;
 use App\Models\Setting as SettingModel;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

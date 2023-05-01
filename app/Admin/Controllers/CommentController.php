@@ -5,7 +5,7 @@ namespace App\Admin\Controllers;
 use App\Admin\Renderable\ItemTable;
 use App\Admin\Renderable\PostTable;
 use App\Admin\Renderable\UserTable;
-use App\Admin\Repositories\Comment;
+use App\Models\Comment;
 use App\Models\Comment as CommentModel;
 use App\Models\Item;
 use App\Models\Post;

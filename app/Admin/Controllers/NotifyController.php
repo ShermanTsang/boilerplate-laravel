@@ -3,7 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Renderable\UserTable;
-use App\Admin\Repositories\Notify;
+use App\Models\Notify;
 use App\Models\User;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

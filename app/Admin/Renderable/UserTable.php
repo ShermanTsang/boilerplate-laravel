@@ -2,7 +2,7 @@
 
 namespace App\Admin\Renderable;
 
-use App\Admin\Repositories\User;
+use App\Models\User;
 use App\Models\Profile;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Grid\LazyRenderable;

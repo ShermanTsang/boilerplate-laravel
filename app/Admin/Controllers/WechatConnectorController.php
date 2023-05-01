@@ -3,7 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Renderable\UserTable;
-use App\Admin\Repositories\WechatConnector;
+use App\Models\WechatConnector;
 use App\Models\User;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

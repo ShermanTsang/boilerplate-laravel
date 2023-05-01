@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\User;
+use App\Models\User;
 use App\Models\Profile;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;

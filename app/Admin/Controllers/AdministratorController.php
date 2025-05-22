@@ -2,15 +2,15 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Staff;
-use App\Models\Staff as StaffModel;
+use App\Models\Administrator;
+use App\Models\Administrator as AdministratorModel;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Http\Controllers\AdminController;
 use Dcat\Admin\Show;
 use Dcat\Admin\Widgets\Tree;
 
-class StaffController extends AdminController
+class AdministratorController extends AdminController
 {
     /**
      * Make a form builder.
@@ -19,7 +19,7 @@ class StaffController extends AdminController
      */
     public function form()
     {
-        return Form::make(Staff::with(['roles']), function (Form $form) {
+        return Form::make(Administrator::with(['roles']), function (Form $form) {
             $userTable = config('admin.database.users_table');
 
             $connection = config('admin.database.connection');
@@ -77,7 +77,7 @@ class StaffController extends AdminController
             $form->display('created_at', trans('admin.created_at'));
             $form->display('updated_at', trans('admin.updated_at'));
 
-            if ($id == StaffModel::DEFAULT_ID) {
+            if ($id == AdministratorModel::DEFAULT_ID) {
                 $form->disableDeleteButton();
             }
         })->saving(function (Form $form) {
@@ -98,7 +98,7 @@ class StaffController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(Staff::with(['roles']), function (Grid $grid) {
+        return Grid::make(Administrator::with(['roles']), function (Grid $grid) {
             // Fields
             $grid->column('id')->sortable();
             $grid->column('name', '真实姓名')->sortable()->editable();
@@ -150,7 +150,7 @@ class StaffController extends AdminController
 
             // AUTH
             $grid->actions(function (Grid\Displayers\Actions $actions) {
-                if ($actions->getKey() == StaffModel::DEFAULT_ID) {
+                if ($actions->getKey() == AdministratorModel::DEFAULT_ID) {
                     $actions->disableDelete();
                 }
             });
@@ -167,7 +167,7 @@ class StaffController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, Staff::with(['roles']), function (Show $show) {
+        return Show::make($id, Administrator::with(['roles']), function (Show $show) {
             $show->field('id');
             $show->field('username');
             $show->field('name');

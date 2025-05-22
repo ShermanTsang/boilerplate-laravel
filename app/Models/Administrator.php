@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 
 /**
- * Class Staff
+ * Class Administrator
  *
  * @property int $id
  * @property string $name
@@ -36,7 +36,7 @@ use Illuminate\Support\Facades\URL;
  *
  * @package App\Models
  */
-class Staff extends Model implements AuthenticatableContract
+class Administrator extends Model implements AuthenticatableContract
 {
 
     use Authenticatable,
@@ -45,7 +45,7 @@ class Staff extends Model implements AuthenticatableContract
 
     const DEFAULT_ID = 1;
 
-    protected $table = 'Staff';
+    protected $table = 'Administrator';
     protected $dateFormat = 'Y-m-d h:i:sO';
     protected $casts = [
         'tags' => 'json'
@@ -124,12 +124,12 @@ class Staff extends Model implements AuthenticatableContract
 
     public function union_orders()
     {
-        return $this->hasMany(UnionOrder::class, 'staffId');
+        return $this->hasMany(UnionOrder::class, 'administratorId');
     }
 
     public function entrust_purchase_orders()
     {
-        return $this->hasMany(EntrustPurchaseOrder::class, 'staffId');
+        return $this->hasMany(EntrustPurchaseOrder::class, 'administratorId');
     }
 
 }

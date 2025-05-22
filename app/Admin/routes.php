@@ -21,7 +21,7 @@ Route::group([
     // Resource Routes
     $router->resource('/advertise', 'AdvertiseController');
     $router->resource('/banner', 'BannerController');
-    $router->resource('/staff', 'StaffController');
+    $router->resource('/administrator', 'AdministratorController');
     $router->resource('/post', 'PostController');
     $router->resource('/postCategory', 'PostCategoryController');
     $router->resource('/setting', 'SettingController');

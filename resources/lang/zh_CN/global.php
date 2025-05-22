@@ -2,7 +2,7 @@
 
 $businessText = [
     // model camlCase style name
-    'staff' => '员工',
+    'administrator' => '员工',
     'favorite' => '收藏夹',
     'item' => '藏品',
     'itemCategory' => '藏品分类',
@@ -20,7 +20,7 @@ $businessText = [
     'viewHistory' => '浏览记录',
     'wechatConnector' => '微信绑定',
     // model pascalCase style name
-    'Staff' => '员工',
+    'Administrator' => '员工',
     'Favorite' => '收藏夹',
     'Item' => '藏品',
     'ItemCategory' => '藏品分类',

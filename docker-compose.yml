@@ -6,9 +6,9 @@ services:
     build: docker
     container_name: ${APP_NAME}-app
     volumes:
-      - .:/var/www/html
-      - /var/www/html/vendor
-      - /var/www/html/storage
+      - .:/www/app
+      - /www/app/vendor
+      - /www/app/storage
     depends_on:
       - db
     environment:
@@ -21,7 +21,7 @@ services:
     ports:
       - "${WEB_EXTERNAL_PORT:-8000}:80"
     volumes:
-      - .:/var/www/html
+      - .:/www/app
       - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - app

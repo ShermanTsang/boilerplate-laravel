@@ -21,18 +21,21 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd pdo_pgsql pgsql zip
 
 # 设置工作目录
-WORKDIR /var/www/html
+WORKDIR /www/app
 
 # 复制项目文件
 COPY . .
 
 # 解决 Git 所有权问题
-RUN git config --global --add safe.directory /var/www/html
+RUN git config --global --add safe.directory /www/app
 
 # 安装依赖
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install --ignore-platform-reqs
 
 # 设置权限
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage
+RUN chown -R www-data:www-data /www/app \
+    && chmod -R 755 /www/app/storage
+
+# 安装管理面板
+RUN php artisan admin:install

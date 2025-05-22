@@ -1,4 +1,9 @@
+FROM composer:2.5 AS composer_base
 FROM php:8.1-fpm
+COPY --from=composer_base /usr/bin/composer /usr/local/bin/composer
+
+# 验证 Composer 是否安装成功
+RUN composer --version || { echo "Composer installation failed"; exit 1; }
 
 # 安装依赖
 RUN apt-get update && apt-get install -y \
@@ -15,12 +20,6 @@ RUN apt-get update && apt-get install -y \
 # 安装 PHP 扩展（包括 PostgreSQL 和 zip 扩展）
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd pdo_pgsql pgsql zip
 
-# 安装 Composer
-RUN curl -sS https://install.phpcomposer.com/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# 验证 Composer 是否安装成功
-RUN composer --version || echo "Composer installation failed"
-
 # 设置工作目录
 WORKDIR /var/www/html
 
@@ -31,6 +30,7 @@ COPY . .
 RUN git config --global --add safe.directory /var/www/html
 
 # 安装依赖
+ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install --ignore-platform-reqs
 
 # 设置权限

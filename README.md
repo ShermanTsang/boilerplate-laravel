@@ -20,7 +20,7 @@ docker compose up --build
 You have no need to run `php artisan admin:publish` command, because the project already load with the related files.
 
 ```shell
-docker compose run app bash -c "php artisan admin:install" 
+docker compose exec app bash -c "php artisan admin:install"
 ```
 
 If executing successfully, you can see the logs:
@@ -56,9 +56,9 @@ Done.
 We use a laravel package `reliese/laravel` to generate our models.
 
 ```bash
-php artisan vendor:publish --tag=reliese-models
-php artisan config:clear
-php artisan code:models
+docker compose exec app bash -c "php artisan vendor:publish --tag=reliese-models"
+docker compose exec app bash -c "php artisan config:clear"
+docker compose exec app bash -c "php artisan code:models"
 ```
 
 The program will download the model files from the server to your local development directory automatically.

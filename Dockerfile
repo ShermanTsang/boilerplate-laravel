@@ -36,6 +36,3 @@ RUN composer install --ignore-platform-reqs
 # 设置权限
 RUN chown -R www-data:www-data /www/app \
     && chmod -R 755 /www/app/storage
-
-# 安装管理面板
-RUN php artisan admin:install

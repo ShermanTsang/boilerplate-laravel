@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev
 
 # 安装 PHP 扩展（包括 PostgreSQL 和 zip 扩展）
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd pdo_pgsql pgsql zip
+RUN docker-php-ext-install mbstring exif pcntl bcmath gd pdo_pgsql pgsql zip openssl tokenizer json
 
 # 设置工作目录
 WORKDIR /www/app
@@ -35,4 +35,5 @@ RUN composer install --ignore-platform-reqs
 
 # 设置权限
 RUN chown -R www-data:www-data /www/app \
-    && chmod -R 755 /www/app/storage
+    && chmod -R 755 /www/app/storage \
+    && chmod -R 755 /www/app/bootstrap/cache

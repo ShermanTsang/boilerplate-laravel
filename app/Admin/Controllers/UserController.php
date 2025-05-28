@@ -101,9 +101,6 @@ class UserController extends AdminController
             $show->field('id');
             $show->field('name');
             $show->field('email');
-            $show->field('profile.gender', '性别');
-            $show->field('profile.bio', '简介');
-            $show->field('profile.gender')->using(Profile::$Gender);
 
             $show->field('lastLoginAt', '最近登录')->view('datetime');
             $show->field('created_at', '注册时间')->view('datetime');

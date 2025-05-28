@@ -25,7 +25,7 @@ class UpdateAdminMenuTable extends Migration
     {
         Schema::table($this->config('database.menu_table'), function (Blueprint $table) {
             $table->tinyInteger('show')->default(1)->after('uri');
-            $table->string('extension', 50)->default('')->after('uri');
+            $table->text('extension')->default('')->after('uri');
         });
     }
 

@@ -14,10 +14,10 @@ return new class extends Migration {
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('sub_title');
-            $table->string('description')->nullable();
-            $table->string('cover_image')->nullable();
+            $table->text('title');
+            $table->text('sub_title');
+            $table->text('description')->nullable();
+            $table->text('cover_image')->nullable();
             $table->text('content')->nullable();
             $table->integer('order')->nullable()->default(-1);
             $table->boolean('is_featured')->default(false);

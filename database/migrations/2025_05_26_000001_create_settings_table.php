@@ -14,9 +14,9 @@ return new class extends Migration {
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('key')->unique();
-            $table->string('name');
-            $table->string('description')->nullable();
+            $table->text('key')->unique();
+            $table->text('name');
+            $table->text('description')->nullable();
             $table->text('value');
             $table->enum('type', ['TEXT', 'IMAGE_URL', 'FILE_URL', 'BOOLEAN']);
             $table->boolean('is_editable')->default(true);

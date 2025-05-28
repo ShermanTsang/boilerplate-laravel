@@ -14,11 +14,11 @@ return new class extends Migration {
     {
         Schema::create('advertises', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image');
-            $table->string('position');
-            $table->string('position_sign');
-            $table->string('page_path')->nullable();
+            $table->text('name');
+            $table->text('image');
+            $table->text('position');
+            $table->text('position_sign');
+            $table->text('page_path')->nullable();
             $table->text('content')->nullable();
             $table->boolean('is_valid')->default(true);
             $table->timestamps();

@@ -14,9 +14,9 @@ return new class extends Migration {
     {
         Schema::create('post_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('cover_image')->nullable();
+            $table->text('name');
+            $table->text('description')->nullable();
+            $table->text('cover_image')->nullable();
             $table->timestamps();
         });
     }

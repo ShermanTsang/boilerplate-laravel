@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_IS_INTERNATIONAL', false) ? 'UTC' : 'Asia/Shanghai',
 
     /*
     |--------------------------------------------------------------------------

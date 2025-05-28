@@ -4,11 +4,10 @@
         $localtime = $carbonTime->setTimezone('Asia/Shanghai');
     @endphp
     <div class="datetime-column">
-        <div><span
-                class="datetime-column-region">具体</span>{{ $localtime->toDateTimeString()  }}
+        <div>{{ $localtime->toDateTimeString()  }}
         </div>
         <div><span
-                class="datetime-column-region">已读</span>{{ $localtime->diffForHumans() }}
+                class="datetime-column-sub">{{ $localtime->diffForHumans() }}</span>
         </div>
     </div>
 @endif

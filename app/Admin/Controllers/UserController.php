@@ -18,22 +18,11 @@ class UserController extends AdminController
      */
     public function form()
     {
-        return Form::make(User::with(['profile']), function (Form $form) {
+        return Form::make(User::query(), function (Form $form) {
             $form->display('id');
             $form->text('name')->required();
             $form->mobile('mobile');
             $form->email('email');
-            $form->text('profile.bio', '个人介绍');
-            $form->image('profile.avatarImage', '头像')->move('images/user/avatar')->uniqueName()->autoUpload()
-                ->compress([
-                    'quality' => 90,
-                    'allowMagnify' => false,
-                    'crop' => false,
-                    'preserveHeaders' => true,
-                    'noCompressIfLarger' => false,
-                    'compressSize' => 0
-                ]);
-            $form->select('profile.gender')->options(Profile::$Gender);
 
             $id = $form->getKey();
             if ($id) {
@@ -74,10 +63,8 @@ class UserController extends AdminController
             // Fields
             $grid->column('id')->sortable();
             $grid->column('name')->sortable()->editable();
-            $grid->column('profile.avatarImage', '头像')->image('', 64, 64);
             $grid->column('mobile')->copyable();
             $grid->column('email')->copyable();
-            $grid->column('profile.gender', '性别')->using(Profile::$Gender)->filter()->sortable();
 
             $grid->column('lastLoginAt', '最近登录')->sortable()->view('datetime');
             $grid->column('created_at', '注册时间')->sortable()->view('datetime');
@@ -88,7 +75,6 @@ class UserController extends AdminController
                 $filter->equal('id');
                 $filter->like('name');
                 $filter->like('mobile');
-                $filter->equal('gender')->select(Profile::$Gender);
             });
             $grid->quickSearch(['id', 'name', 'mobile']);
 

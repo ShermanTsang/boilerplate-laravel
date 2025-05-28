@@ -31,7 +31,7 @@ Admin::style(
         display: flex;
         flex-flow: column;
     }
-    .datetime-column-region {
+    .datetime-column-sub {
         color: #999;
         margin-right: 3px;
         font-size: 0.85rem;

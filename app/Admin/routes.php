@@ -24,10 +24,11 @@ Route::group([
     $router->resource('/administrator', 'AdministratorController');
     $router->resource('/post', 'PostController');
     $router->resource('/postCategory', 'PostCategoryController');
+    $router->resource('/page', 'PageController');
     $router->resource('/setting', 'SettingController');
     $router->resource('/user', 'UserController');
     $router->resource('/wechatConnector', 'WechatConnectorController');
     $router->resource('/notify', 'NotifyController');
-    $router->resource('/comment', 'CommentController');
+
 
 });
